@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://aramex86.github.io/fsaa/sitemap.xml
