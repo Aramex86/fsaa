@@ -145,8 +145,8 @@ src/
 |---|---|---|
 | 0 | Repo, honest README, CONTRIBUTING | ✅ done (this repo) |
 | 1 | Docs site (indexable: OG, sitemap, GSC) | ✅ [aramex86.github.io/fsaa](https://aramex86.github.io/fsaa/) |
-| 2 | Boilerplate — two templates: [Next.js App Router](https://github.com/Aramex86/fsaa-react) + [plain React (Vite)](https://github.com/Aramex86/fsaa-vite), ESLint-enforced boundaries, Projects/Orders example | 🚧 in progress (core shipped, v0.1.0) |
-| 3 | CLI — `npx fsaa init` (asks next/vite) + slice generator | — |
+| 2 | Boilerplate — two templates: [Next.js App Router](https://github.com/Aramex86/fsaa-react) + [plain React (Vite)](https://github.com/Aramex86/fsaa-vite), ESLint-enforced boundaries, Projects/Orders example | ✅ done |
+| 3 | CLI — `npx fsaa init` (asks next/vite) + slice generator | 🚧 in progress (core shipped, v0.2.0)  |
 | 4 | Promotion, adoption feedback loop | — |
 
 ## Contributing
