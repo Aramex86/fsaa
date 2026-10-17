@@ -1,6 +1,24 @@
-# FSAA — Feature-Sliced Atomic Architecture
+# FSAA — Feature-Sliced Atomic Architecture ⚡
 
-**FSAA is FSD + Atomic Design with an answer to the question both leave open: *where does UI go?***
+> **FSD + Atomic Design with the missing decision rules: *where does UI go?***
+
+[![templates](https://img.shields.io/badge/templates-fsaa--react%20·%20fsaa--vite-43e0bd)](https://aramex86.github.io/fsaa/)
+[![docs](https://img.shields.io/badge/docs-aramex86.github.io%2Ffsaa-7ab8ff)](https://aramex86.github.io/fsaa/)
+![license](https://img.shields.io/badge/license-MIT-b79bff)
+![methodology](https://img.shields.io/badge/status-v0.1%20draft-ffcf6b)
+
+* 💡 **Three decision rules** — graduation, boundary test, organisms eliminated
+* 🔒 **ESLint-enforced boundaries** — wrong imports fail lint, not code review
+* 🧩 **Two templates** — Next.js App Router · plain React (Vite + react-router)
+* 🚀 **Self-demonstrating** — the docs site is itself built on FSAA
+* 🏭 **Production-proven** — internal financial tool, real daily users
+* 📖 **Inspectable without NDA** — open code, open docs, open issues
+
+<div align="center">
+
+**[Read the docs →](https://aramex86.github.io/fsaa/)** · **[Next.js template →](https://github.com/Aramex86/fsaa-react)** · **[Plain React template →](https://github.com/Aramex86/fsaa-vite)**
+
+</div>
 
 FSAA is not a new architecture theory. It is a practical, opinionated assembly of two proven methods — Feature-Sliced Design and Atomic Design — with the missing decision rules added. We do not claim a revolution.
 
