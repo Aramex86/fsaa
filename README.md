@@ -1,3 +1,5 @@
+<img width="814" height="243" alt="image" src="https://github.com/user-attachments/assets/047ea0c4-ae54-43f1-9dd9-2a8805839ed0" />
+
 # FSAA — Feature-Sliced Atomic Architecture ⚡
 
 > **FSD + Atomic Design with the missing decision rules: *where does UI go?***
