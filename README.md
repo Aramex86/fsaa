@@ -4,7 +4,11 @@
 
 FSAA is not a new architecture theory. It is a practical, opinionated assembly of two proven methods — Feature-Sliced Design and Atomic Design — with the missing decision rules added. We do not claim a revolution.
 
-> **Status:** Phase 0 (foundation). Used in production (internal tool) with real daily users. Public example app is coming.
+## Status
+
+> **Phase 0–1 (done):** methodology frozen, docs site live and indexed. **Phase 2 (in progress):** starter templates shipped — [fsaa-react](https://github.com/Aramex86/fsaa-react) (Next.js App Router) and [fsaa-vite](https://github.com/Aramex86/fsaa-vite) (plain React) with **ESLint-enforced layer boundaries**: wrong imports fail lint, not code review.
+
+Used in production (internal tool) with real daily users — and **self-demonstrating**: this documentation site is itself built on FSAA (features/entities/shared, thin routes), so the architecture is inspectable without NDA. Both templates clone the same structure with working Projects/Orders examples. Public example app — Phase 2.
 
 ## The problem
 
@@ -54,6 +58,8 @@ Feature-local UI lives **flat** in `features/<name>/ui/` — 5–10 components, 
 
 Features own their UI until it earns sharing.
 
+**Mechanics.** The trigger is objective — a component is needed by a *second independent feature*. The first duplicate is legal: one copy is a signal, not a catastrophe. Promotion = **one PR**: the component moves to `shared/ui/molecules/`, both features import it from the shared public API (`index.ts`), and the feature-local copies are deleted inside that same changeset. Cross-feature imports are a lint error, so a copy-pasted component fails CI — drift cannot hide, the only legal cross-feature sources are entities (data) and shared (UI). (The starter templates ship this enforcement — see Phase 2 in the roadmap.)
+
 ### 2. The boundary test for `shared`
 
 > *If I removed this component from the app entirely, could it still be described without mentioning users, orders, or projects?*
@@ -94,7 +100,7 @@ src/
 
 **The rule:** the table stays generic; business-specific columns live in their features. If two entities need the same visual pattern, extract the pattern into `shared` — keep the entity-specific configuration in `features`.
 
-Full runnable example: [`example/`](./example) *(coming in Phase 2)*
+**Runnable code:** this exact structure ships in the starter templates — [fsaa-react (Next.js App Router)](https://github.com/Aramex86/fsaa-react) and [fsaa-vite (plain React SPA)](https://github.com/Aramex86/fsaa-vite), both with the Projects/Orders example working (`npm run dev` → `/projects`, `/orders`). A step-by-step trace lives in the [docs' worked example](https://aramex86.github.io/fsaa/example/).
 
 ## Comparison
 
@@ -117,10 +123,10 @@ Full runnable example: [`example/`](./example) *(coming in Phase 2)*
 
 | Phase | Focus | Status |
 |---|---|---|
-| 0 | Repo, honest README, CONTRIBUTING | **in progress** |
-| 1 | Docs: import rules, criteria, anti-patterns | next |
-| 2 | Boilerplate: Vite + React + TS, ESLint import enforcement, example app | — |
-| 3 | Architecture import checker, CI | — |
+| 0 | Repo, honest README, CONTRIBUTING | ✅ done (this repo) |
+| 1 | Docs site (indexable: OG, sitemap, GSC) | ✅ [aramex86.github.io/fsaa](https://aramex86.github.io/fsaa/) |
+| 2 | Boilerplate — two templates: [Next.js App Router](https://github.com/Aramex86/fsaa-react) + [plain React (Vite)](https://github.com/Aramex86/fsaa-vite), ESLint-enforced boundaries, Projects/Orders example | 🚧 in progress (core shipped, v0.1.0) |
+| 3 | CLI — `npx fsaa init` (asks next/vite) + slice generator | — |
 | 4 | Promotion, adoption feedback loop | — |
 
 ## Contributing
