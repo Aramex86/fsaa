@@ -26,7 +26,7 @@ FSAA is not a new architecture theory. It is a practical, opinionated assembly o
 
 ## Status
 
-> **Phase 0–1 (done):** methodology frozen, docs site live and indexed. **Phase 2 (in progress):** starter templates shipped — [fsaa-react](https://github.com/Aramex86/fsaa-react) (Next.js App Router) and [fsaa-vite](https://github.com/Aramex86/fsaa-vite) (plain React) with **ESLint-enforced layer boundaries**: wrong imports fail lint, not code review.
+> **Phase 0–1 (done):** methodology frozen, docs site live and indexed. **Phase 2 (in progress):** starter templates shipped — [fsaa-next](https://github.com/Aramex86/fsaa-next) (Next.js App Router) and [fsaa-vite](https://github.com/Aramex86/fsaa-vite) (plain React) with **ESLint-enforced layer boundaries**: wrong imports fail lint, not code review.
 
 Used in production (internal tool) with real daily users — and **self-demonstrating**: this documentation site is itself built on FSAA (features/entities/shared, thin routes), so the architecture is inspectable without NDA. Both templates clone the same structure with working Projects/Orders examples. Public example app — Phase 2.
 
@@ -120,7 +120,7 @@ src/
 
 **The rule:** the table stays generic; business-specific columns live in their features. If two entities need the same visual pattern, extract the pattern into `shared` — keep the entity-specific configuration in `features`.
 
-**Runnable code:** this exact structure ships in the starter templates — [fsaa-react (Next.js App Router)](https://github.com/Aramex86/fsaa-react) and [fsaa-vite (plain React SPA)](https://github.com/Aramex86/fsaa-vite), both with the Projects/Orders example working (`npm run dev` → `/projects`, `/orders`). A step-by-step trace lives in the [docs' worked example](https://aramex86.github.io/fsaa/example/).
+**Runnable code:** this exact structure ships in the starter templates — [fsaa-next (Next.js App Router)](https://github.com/Aramex86/fsaa-next) and [fsaa-vite (plain React SPA)](https://github.com/Aramex86/fsaa-vite), both with the Projects/Orders example working (`npm run dev` → `/projects`, `/orders`). A step-by-step trace lives in the [docs' worked example](https://aramex86.github.io/fsaa/example/).
 
 ## Comparison
 
