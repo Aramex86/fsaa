@@ -7,11 +7,12 @@
 [![templates](https://img.shields.io/badge/templates-fsaa--react%20·%20fsaa--vite-43e0bd)](https://aramex86.github.io/fsaa/)
 [![docs](https://img.shields.io/badge/docs-aramex86.github.io%2Ffsaa-7ab8ff)](https://aramex86.github.io/fsaa/)
 ![license](https://img.shields.io/badge/license-MIT-b79bff)
-![methodology](https://img.shields.io/badge/status-v0.1%20draft-ffcf6b)
+![methodology](https://img.shields.io/badge/status-v0.3%20draft-ffcf6b)
 
 * 💡 **Three decision rules** — graduation, boundary test, organisms eliminated
 * 🔒 **ESLint-enforced boundaries** — wrong imports fail lint, not code review
 * 🧩 **Two templates** — Next.js App Router · plain React (Vite + react-router)
+* 🤖 **Agentic by default** — AGENTS.md contract with CI drift-check, step-by-step agent procedures, navigation skill for external agents
 * 🚀 **Self-demonstrating** — the docs site is itself built on FSAA
 * 🏭 **Production-proven** — internal financial tool, real daily users
 * 📖 **Inspectable without NDA** — open code, open docs, open issues
@@ -26,7 +27,7 @@ FSAA is not a new architecture theory. It is a practical, opinionated assembly o
 
 ## Status
 
-> **Phase 0–1 (done):** methodology frozen, docs site live and indexed. **Phase 2 (in progress):** starter templates shipped — [fsaa-next](https://github.com/Aramex86/fsaa-next) (Next.js App Router) and [fsaa-vite](https://github.com/Aramex86/fsaa-vite) (plain React) with **ESLint-enforced layer boundaries**: wrong imports fail lint, not code review.
+> **Phase 0–2 (done):** methodology frozen, docs site live and indexed, starter templates shipped — [fsaa-next](https://github.com/Aramex86/fsaa-next) (Next.js App Router) and [fsaa-vite](https://github.com/Aramex86/fsaa-vite) (plain React) with **ESLint-enforced layer boundaries**: wrong imports fail lint, not code review. **Phase 3 (in progress):** the agentic machine — an [AGENTS.md contract](https://github.com/Aramex86/fsaa-next/blob/main/AGENTS.md) where every rule carries a CI check marker, a **drift-check** that fails the build when docs and code drift apart, `agents/` step-by-step procedures, and [`where-ui-goes`](https://github.com/Aramex86/fsaa-next/blob/main/agents/where-ui-goes.md) — a navigation skill for external agents ([how it works →](https://aramex86.github.io/fsaa/agentic/)).
 
 Used in production (internal tool) with real daily users — and **self-demonstrating**: this documentation site is itself built on FSAA (features/entities/shared, thin routes), so the architecture is inspectable without NDA. Both templates clone the same structure with working Projects/Orders examples. Public example app — Phase 2.
 
@@ -146,8 +147,9 @@ src/
 | 0 | Repo, honest README, CONTRIBUTING | ✅ done (this repo) |
 | 1 | Docs site (indexable: OG, sitemap, GSC) | ✅ [aramex86.github.io/fsaa](https://aramex86.github.io/fsaa/) |
 | 2 | Boilerplate — two templates: [Next.js App Router](https://github.com/Aramex86/fsaa-next) + [plain React (Vite)](https://github.com/Aramex86/fsaa-vite), ESLint-enforced boundaries, Projects/Orders example | ✅ done |
-| 3 | CLI — `npx fsaa init` (asks next/vite) + slice generator | 🚧 in progress (core shipped, v0.2.0)  |
-| 4 | Promotion, adoption feedback loop | — |
+| 3 | Agentic layer — AGENTS.md contract, CI drift-check, `agents/` procedures, external-agent skill | ✅ done ([docs](https://aramex86.github.io/fsaa/agentic/)) |
+| 4 | CLI — `npx fsaa init` (asks next/vite) + slice generator | 🚧 in progress |
+| 5 | Promotion, adoption feedback loop | — |
 
 ## Contributing
 
