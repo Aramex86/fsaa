@@ -1,0 +1,32 @@
+{
+  "name": "fsaa",
+  "version": "0.1.0",
+  "description": "FSAA — Feature-Sliced Atomic Architecture. Scaffold an FSAA app from the official starter templates and generate canonical slices.",
+  "license": "MIT",
+  "author": "Veaceslav Bezusco <Aramex86@users.noreply.github.com>",
+  "type": "module",
+  "bin": {
+    "fsaa": "bin/fsaa.mjs"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aramex86/fsaa.git"
+  },
+  "keywords": [
+    "fsaa",
+    "feature-sliced",
+    "atomic-design",
+    "architecture",
+    "scaffold"
+  ],
+  "scripts": {
+    "selfcheck": "node bin/fsaa.mjs --help"
+  }
+}
