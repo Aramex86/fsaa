@@ -1,7 +1,7 @@
 {
   "name": "create-fsaa",
-  "version": "0.1.0",
-  "description": "FSAA — Feature-Sliced Atomic Architecture. Run `npm create fsaa` (this package) to scaffold an FSAA app from the official starter templates; `fsaa g <slice>` generates canonical slices.",
+  "version": "0.1.1",
+  "description": "FSAA \u2014 Feature-Sliced Atomic Architecture. Run `npm create fsaa` (this package) to scaffold an FSAA app from the official starter templates; `fsaa g <slice>` generates canonical slices.",
   "license": "MIT",
   "author": "Veaceslav Bezusco <Aramex86@users.noreply.github.com>",
   "type": "module",
