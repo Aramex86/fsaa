@@ -148,7 +148,7 @@ src/
 | 1 | Docs site (indexable: OG, sitemap, GSC) | ✅ [aramex86.github.io/fsaa](https://aramex86.github.io/fsaa/) |
 | 2 | Boilerplate — two templates: [Next.js App Router](https://github.com/Aramex86/fsaa-next) + [plain React (Vite)](https://github.com/Aramex86/fsaa-vite), ESLint-enforced boundaries, Projects/Orders example | ✅ done |
 | 3 | Agentic layer — AGENTS.md contract, CI drift-check, `agents/` procedures, external-agent skill | ✅ done ([docs](https://aramex86.github.io/fsaa/agentic/)) |
-| 4 | CLI — `npm create fsaa@latest` (scaffolds next/vite) + `fsaa g` generators (pair, entity, feature, atom, molecule, page) | 🟢 core shipped ([`fsaa` repo](https://github.com/Aramex86/fsaa)); npm registry package next |
+| 4 | CLI — `npm create fsaa@latest` (scaffolds next/vite) + `fsaa g` generators (pair, entity, feature, atom, molecule, page) | ✅ shipped — [npm: create-fsaa](https://www.npmjs.com/package/create-fsaa) · plugin: [eslint-plugin-fsaa](https://www.npmjs.com/package/eslint-plugin-fsaa) |
 | 5 | Promotion, adoption feedback loop | — |
 
 ## Contributing
