@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2 — 2026-11-10
+
+- npm-page confusion fix: README now leads with **`npm create fsaa@latest`** and an explicit warning that `npm i create-fsaa` only installs the CLI (first real adopter hit exactly this). No code changes.
+
 ## 0.2.0 — 2026-10-29
 
 - **`fsaa g` — five canonical generators** (was: one pair command):
