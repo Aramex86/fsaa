@@ -4,6 +4,26 @@
 
 > **FSD + Atomic Design with the missing decision rules: *where does UI go?***
 
+**⚠ This package is a scaffolding CLI, not a library.** `npm i create-fsaa` only installs it into an existing project's `node_modules` — and nothing happens. Run it instead:
+
+```text
+# from an EMPTY folder — this creates a new FSAA project:
+npm create fsaa@latest
+# (equivalently: npx create-fsaa@latest)
+```
+
+What `npm create fsaa` gives you: the full FSAA layer structure (`app/`, `pages/`, `features/`, `entities/`, `shared/`), `eslint.config.mjs` with **eslint-plugin-fsaa** boundary rules wired into CI, an `AGENTS.md` contract with drift-check, and `pnpm` scripts (`dev`, `lint`, `typecheck`, `build`).
+
+Inside a created FSAA project, the same CLI generates canonical slices:
+
+```text
+pnpm exec fsaa g feature billing
+pnpm exec fsaa g entity invoice
+pnpm exec fsaa g molecule DataTable
+```
+
+---
+
 [![templates](https://img.shields.io/badge/templates-fsaa--react%20·%20fsaa--vite-43e0bd)](https://aramex86.github.io/fsaa/)
 [![docs](https://img.shields.io/badge/docs-aramex86.github.io%2Ffsaa-7ab8ff)](https://aramex86.github.io/fsaa/)
 ![license](https://img.shields.io/badge/license-MIT-b79bff)
