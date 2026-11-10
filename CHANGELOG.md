@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.3 — 2026-11-10
+
+- Post-scaffold banner now says dependencies ARE installed and answers the "pnpm not recognized" wall: `corepack enable` (one-time, nothing to install globally) or `npx -y <pinned pnpm>` per command. Fallback paths on missing-npx also point at corepack. First real adopter hit this exact gap. No logic changes.
+
 ## 0.2.2 — 2026-11-10
 
 - npm-page confusion fix: README now leads with **`npm create fsaa@latest`** and an explicit warning that `npm i create-fsaa` only installs the CLI (first real adopter hit exactly this). No code changes.
