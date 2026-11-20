@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.4 — 2026-11-20
+
+- **App names normalize instead of stack-tracing** (first adopter report): `npm create fsaa` with `PayOn` crashed with "unexpected error" + a stack trace, because `validate()` threw plain `Error`s the bin didn't recognize as user errors. Now: sloppy names are normalized before validation (`PayOn` -> `pay-on`, `My App` -> `my-app`, `MyApp.` -> `my-app`) with a visible notice, and every remaining validation failure ("???", reserved Windows names, unknown template) exits with a clean one-line `fsaa: ...` message - "wrong answers" are made impossible, not rejected with a trace. (fix: lib/init.mjs)
+
+
 ## 0.2.3 — 2026-11-10
 
 - Post-scaffold banner now says dependencies ARE installed and answers the "pnpm not recognized" wall: `corepack enable` (one-time, nothing to install globally) or `npx -y <pinned pnpm>` per command. Fallback paths on missing-npx also point at corepack. First real adopter hit this exact gap. No logic changes.
