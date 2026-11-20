@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **Windows: npx fallback now actually runs when pnpm is missing.** `spawnSync("pnpm.cmd", ..., { shell: true })` never sets `r.error` when the command is absent: cmd.exe prints `'pnpm.cmd' is not recognized` and exits 1. `init` treated that as a failed install and skipped the pinned-pnpm-through-npx fallback. Now `pnpm --version` is probed first; if it fails, the fallback runs. (fix: lib/init.mjs)
+
 ## 0.2.4 — 2026-11-20
 
 - **App names normalize instead of stack-tracing** (first adopter report): `npm create fsaa` with `PayOn` crashed with "unexpected error" + a stack trace, because `validate()` threw plain `Error`s the bin didn't recognize as user errors. Now: sloppy names are normalized before validation (`PayOn` -> `pay-on`, `My App` -> `my-app`, `MyApp.` -> `my-app`) with a visible notice, and every remaining validation failure ("???", reserved Windows names, unknown template) exits with a clean one-line `fsaa: ...` message - "wrong answers" are made impossible, not rejected with a trace. (fix: lib/init.mjs)
