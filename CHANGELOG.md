@@ -1,8 +1,10 @@
 # Changelog
 
-## Unreleased
+## 0.2.6
 
 - **Windows: npx fallback now actually runs when pnpm is missing.** `spawnSync("pnpm.cmd", ..., { shell: true })` never sets `r.error` when the command is absent: cmd.exe prints `'pnpm.cmd' is not recognized` and exits 1. `init` treated that as a failed install and skipped the pinned-pnpm-through-npx fallback. Now `pnpm --version` is probed first; if it fails, the fallback runs. (fix: lib/init.mjs)
+- **Names are normalized ALWAYS, not only when the lowercase gate fails.** The gate `^[a-z0-9][a-z0-9._-]*$` skipped two names that still should not reach validation raw: trailing `"-"`/`"."` (e.g. `my-app-` passed the gate, then failed the trailing-char check — when the normalizer would produce `my-app`), and underscore names (`pay_on` stayed `pay_on` instead of becoming kebab-case `pay-on` — npm allows `_`, but the scaffold folder should be predictable). `normalizeName()` is now unconditional: it is idempotent on already-valid names, so only the broken inputs change. Still intentionally out of scope: intermediate dots (`my.app` stays `my.app` — valid npm name). (fix: lib/init.mjs)
+- package.json version was bumped to 0.2.5 for the pnpm probe fix at publish time only; repo now moves to 0.2.6.
 
 ## 0.2.4 — 2026-11-20
 
